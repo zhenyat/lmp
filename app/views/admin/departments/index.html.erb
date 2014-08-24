@@ -1,0 +1,35 @@
+<h1>Listing departments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Unit</th>
+      <th>Business</th>
+      <th>Departmnet type</th>
+      <th>Name</th>
+      <th>Title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @departments.each do |department| %>
+      <tr>
+        <td><%= department.unit_id %></td>
+        <td><%= department.business_id %></td>
+        <td><%= department.departmnet_type_id %></td>
+        <td><%= department.name %></td>
+        <td><%= department.title %></td>
+        <td><%= link_to 'Show', [:admin, department] %></td>
+        <td><%= link_to 'Edit', edit_admin_department_path(department) %></td>
+        <td><%= link_to 'Destroy', [:admin, department], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Department', new_admin_department_path %>

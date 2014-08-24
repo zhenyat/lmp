@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>lmp-admin</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <%#= favicon_link_tag  '/assets/ror.ico' %>
+    <%= link_to image_tag('/assets/leroy_merlin.png', alt: 'Leroy Merlin', title: 'На главную'), url_for(controller: '/pages', action: :home) %>
+    <h1>Модель компетенций</h1>
+    <h2>Модуль Администратора</h2>
+  </header>
+
+  <nav id="top">
+    <ul>
+      <!--li><%= link_to 'Администрирование',        '/admin/panel' %></li-->
+      <li><%= link_to 'Сотрудники',               '/admin/employees' %></li>
+      <li><%= link_to 'Должности',                '/admin/positions' %></li>
+      <li><%= link_to 'Уровни компетенции',       '/admin/levels' %></li>
+      <li><%= link_to 'Блоки компетенций',        '/admin/clusters' %></li>
+      <li><%= link_to 'Компетенции',              '/admin/competencies' %></li>
+      <li><%= link_to 'Поведенческие индикаторы', '/admin/behaviors' %></li>
+    </ul>
+  </nav>
+
+<%= yield %>
+
+</body>
+</html>
+

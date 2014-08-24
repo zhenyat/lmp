@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leroy Merlin Pilot Project</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+
+  <script>
+    <%# To fix HTML5 issues for IE 8 %>
+    for(var el="header footer nav section article aside time video".split(' ');el.length;){
+       document.createElement(el.pop())
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <%#= favicon_link_tag  '/assets/leroy_merlin.ico' %>
+    <%= link_to image_tag('/assets/leroy_merlin.png', alt: 'Leroy Merlin', title: 'На главную'), url_for(controller: :pages, action: :home) %>
+    <h1>Модель компетенций</h1>
+    <h2>Пилотный проект</h2>
+  </header>
+
+  <nav id="top">
+    <ul>
+      <li><%= link_to 'Обзор модели',      '/pages/review' %></li>
+      <li><%= link_to 'Оценка',            '/assessments' %></li>
+      <li><%= link_to 'Отчетность',        '/reports' %></li>
+      <li><%= link_to 'Администрирование', '/admin/panel' %></li>
+    </ul>
+  </nav>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<h1>Listing department_types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Name</th>
+      <th>Title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @department_types.each do |department_type| %>
+      <tr>
+        <td><%= department_type.name %></td>
+        <td><%= department_type.name %></td>
+        <td><%= department_type.title %></td>
+        <td><%= link_to 'Show', [:admin, department_type] %></td>
+        <td><%= link_to 'Edit', edit_admin_department_type_path(department_type) %></td>
+        <td><%= link_to 'Destroy', [:admin, department_type], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Department type', new_admin_department_type_path %>

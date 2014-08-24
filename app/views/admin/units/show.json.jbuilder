@@ -1,0 +1,1 @@
+json.extract! @unit, :unit_type_id, :name, :name, :title, :created_at, :updated_at

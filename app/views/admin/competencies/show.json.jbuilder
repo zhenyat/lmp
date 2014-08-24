@@ -1,0 +1,1 @@
+json.extract! @competency, :position_id, :cluster_id, :name, :title, :description, :rank, :created_at, :updated_at

@@ -1,0 +1,31 @@
+<h1>Listing unit_types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Name</th>
+      <th>Title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @unit_types.each do |unit_type| %>
+      <tr>
+        <td><%= unit_type.name %></td>
+        <td><%= unit_type.name %></td>
+        <td><%= unit_type.title %></td>
+        <td><%= link_to 'Show', [:admin, unit_type] %></td>
+        <td><%= link_to 'Edit', edit_admin_unit_type_path(unit_type) %></td>
+        <td><%= link_to 'Destroy', [:admin, unit_type], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Unit type', new_admin_unit_type_path %>

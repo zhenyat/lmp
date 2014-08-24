@@ -1,0 +1,1 @@
+json.extract! @position, :business_id, :name, :title, :created_at, :updated_at
