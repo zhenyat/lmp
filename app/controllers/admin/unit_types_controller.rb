@@ -1,4 +1,6 @@
 class Admin::UnitTypesController < ApplicationController
+  layout 'admin'
+  
   before_action :set_unit_type, only: [:show, :edit, :update, :destroy]
 
   # GET /admin/unit_types

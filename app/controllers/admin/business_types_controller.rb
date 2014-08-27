@@ -1,4 +1,6 @@
 class Admin::BusinessTypesController < ApplicationController
+  layout 'admin'
+  
   before_action :set_business_type, only: [:show, :edit, :update, :destroy]
 
   # GET /admin/business_types

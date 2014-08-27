@@ -1,4 +1,6 @@
 class Admin::UnitsController < ApplicationController
+  layout 'admin'
+  
   before_action :set_unit, only: [:show, :edit, :update, :destroy]
 
   # GET /admin/units

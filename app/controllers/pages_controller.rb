@@ -18,7 +18,14 @@ class PagesController < ApplicationController
         @matrix[cluster.name][competency_name] = []
         competencies = Competency.where(name: competency_name)
         competencies.each do |competency|
-          @matrix[cluster.name][competency.name][competency.position.id] = competency.position.name
+#          if cluster.mutual?
+#            @matrix[cluster.name][competency.name][competency.position.id] = 'MMM'
+#            puts "ZT! matrix = " + @matrix[cluster.name][competency.name][competency.position.id]
+#          else
+            @matrix[cluster.name][competency.name][competency.position.id] = competency.position.name
+#                        puts "ZT! matrix = " + @matrix[cluster.name][competency.name][competency.position.id]
+
+#          end
         end
       end
     end

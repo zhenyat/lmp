@@ -1,4 +1,6 @@
 class Admin::EmployeesController < ApplicationController
+  layout 'admin'
+  
   before_action :set_employee, only: [:show, :edit, :update, :destroy]
 
   # GET /admin/employees

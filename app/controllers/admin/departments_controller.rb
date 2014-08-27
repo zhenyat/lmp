@@ -1,4 +1,6 @@
 class Admin::DepartmentsController < ApplicationController
+  layout 'admin'
+  
   before_action :set_department, only: [:show, :edit, :update, :destroy]
 
   # GET /admin/departments

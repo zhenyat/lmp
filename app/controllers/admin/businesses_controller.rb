@@ -1,4 +1,6 @@
 class Admin::BusinessesController < ApplicationController
+  layout 'admin'
+  
   before_action :set_business, only: [:show, :edit, :update, :destroy]
 
   # GET /admin/businesses

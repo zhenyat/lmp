@@ -1,4 +1,6 @@
 class Admin::ClustersController < ApplicationController
+  layout 'admin'
+  
   before_action :set_cluster, only: [:show, :edit, :update, :destroy]
 
   # GET /admin/clusters

@@ -1,4 +1,6 @@
 class Admin::CompetenciesController < ApplicationController
+  layout 'admin'
+  
   before_action :set_competency, only: [:show, :edit, :update, :destroy]
 
   # GET /admin/competencies

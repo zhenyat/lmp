@@ -1,4 +1,6 @@
 class Admin::BehaviorsController < ApplicationController
+  layout 'admin'
+  
   before_action :set_behavior, only: [:show, :edit, :update, :destroy]
 
   # GET /admin/behaviors
